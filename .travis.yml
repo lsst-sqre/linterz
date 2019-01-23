@@ -1,0 +1,17 @@
+---
+sudo: false
+language: c
+matrix:
+  include:
+    - env: TEST=pre-commit
+      services:
+        - docker
+      script: ./tests/pre-commit.sh
+branches:
+  only:
+    - master
+    # also matched against tag pushes
+    - /^\d+\.\d+\.\d+$/
+notifications:
+  email: false
+
