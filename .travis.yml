@@ -7,6 +7,11 @@ matrix:
       services:
         - docker
       script: ./tests/pre-commit.sh
+
+    - env: TEST=terraform
+      services:
+        - docker
+      script: cd tf; ../tests/terraform.sh
 branches:
   only:
     - master
@@ -14,4 +19,3 @@ branches:
     - /^\d+\.\d+\.\d+$/
 notifications:
   email: false
-
