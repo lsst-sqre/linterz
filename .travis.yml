@@ -18,6 +18,11 @@ matrix:
         - docker
       script: ./tests/shellcheck.sh
 
+    - env: TEST=yamllint
+      services:
+        - docker
+      script: ./tests/yamllint.sh
+
     - env: TEST=make
       script: ./tests/make.sh
 branches:
