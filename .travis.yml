@@ -28,6 +28,11 @@ matrix:
         - docker
       script: ./tests/mdl.sh
 
+    - env: TEST=hadolint
+      services:
+        - docker
+      script: ./tests/hadolint.sh
+
     - env: TEST=make
       script: ./tests/make.sh
 branches:
