@@ -8,7 +8,7 @@ EYAML=( **/*.eyaml )
 IGNORE=()
 CONF_FILE=".yamllint.yaml"
 
-# filter out plaintext versions of .eyaml files
+# filter out plain text versions of .eyaml files
 for e in "${!EYAML[@]}"; do
   uneyaml=${EYAML[e]/eyaml/yaml}
   for c in "${!CHECK[@]}"; do
