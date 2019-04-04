@@ -33,6 +33,11 @@ matrix:
         - docker
       script: ./tests/hadolint.sh
 
+    - env: TEST=jsonlint
+      services:
+        - docker
+      script: ./tests/jsonlint.sh
+
     - env: TEST=make
       script: ./tests/make.sh
 branches:
