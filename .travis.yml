@@ -1,5 +1,5 @@
 ---
-language: c
+language: minimal
 matrix:
   include:
     - env: TEST=pre-commit
